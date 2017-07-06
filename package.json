@@ -1,0 +1,33 @@
+{
+  "name": "validator-ts",
+  "version": "1.0.0",
+  "description": "Request Validator For Nodejs By TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./dist/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipv4sec/validator-ts.git"
+  },
+  "author": "ipv4sec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ipv4sec/validator-ts/issues"
+  },
+  "homepage": "https://github.com/ipv4sec/validator-ts#readme",
+  "dependencies": {
+    "@types/assert": "0.0.31",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.7",
+    "assert": "^1.4.1",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-tslint": "^8.1.1",
+    "gulp-typescript": "^3.1.7",
+    "mocha": "^3.4.2",
+    "tslint": "^5.4.3",
+    "tslint-config-standard": "^6.0.1",
+    "typescript": "^2.4.1"
+  }
+}
