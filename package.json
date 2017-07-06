@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Request Validator For Nodejs By TypeScript",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "./node_modules/.bin/mocha ./dist/ --recursive"
   },
@@ -25,6 +26,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-tslint": "^8.1.1",
     "gulp-typescript": "^3.1.7",
+    "merge2": "^1.1.0",
     "mocha": "^3.4.2",
     "tslint": "^5.4.3",
     "tslint-config-standard": "^6.0.1",

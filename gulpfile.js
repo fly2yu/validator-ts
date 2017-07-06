@@ -3,7 +3,8 @@ var gulpTslint = require("gulp-tslint");
 var tslint = require("tslint");
 var ts = require("gulp-typescript");
 var sourcemaps = require('gulp-sourcemaps');
-var tsProject = ts.createProject("tsconfig.json");
+var merge = require('merge2');
+var tsProject = ts.createProject("tsconfig.json" , { declaration: true }  );
 
 var tslintFunction = function () {
   var program = tslint.Linter.createProgram("./tsconfig.json");
@@ -12,12 +13,14 @@ var tslintFunction = function () {
     .pipe(gulpTslint.report({ emitError: false }));
 };
 var buildFunction = function () {
-  return tsProject.src()
+   var tsStream = tsProject.src()
     .pipe(sourcemaps.init())
     .pipe(tsProject())
-    .js
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("dist"));
+  return merge([
+    tsStream.js
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest("dist")),
+    tsStream.dts.pipe(gulp.dest('./dist/'))])
 };
 
 gulp.task('tslint',tslintFunction);
