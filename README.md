@@ -1,6 +1,7 @@
 # Validator-Ts
 
-> Request Validator For Nodejs By TypeScript
+[![](https://img.shields.io/travis/ipv4sec/validator-ts.svg?branch=master&style=flat-square)](https://travis-ci.org/ipv4sec/validator-ts)
+[![](https://img.shields.io/github/tag/ipv4sec/validator-ts.svg?style=flat-square)](https://travis-ci.org/ipv4sec/validator-ts)
 
 
 ### Use
