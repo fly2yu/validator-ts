@@ -1,8 +1,5 @@
 export declare class ValidatorError {
+    private message;
     private reason;
-    private field;
-    constructor(field: string, reason: string);
-}
-export declare enum validatorErrorResaon {
-    ParamError = "PARAM_INVALID",
+    constructor(reason: string, message?: string);
 }
